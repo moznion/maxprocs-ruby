@@ -11,8 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary = "Detect CPU quota from Linux cgroups for container environments"
   spec.description = <<~DESC
     A lightweight Ruby gem that detects CPU quota from Linux cgroups (v1 and v2)
-    and returns the appropriate number of processors for container environments.
-    This is a Ruby equivalent of Go's uber-go/automaxprocs.
+    and returns the appropriate number of processors.
   DESC
   spec.homepage = "https://github.com/moznion/maxprocs-ruby"
   spec.license = "MIT"
