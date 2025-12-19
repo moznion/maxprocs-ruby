@@ -3,12 +3,12 @@
 # Maxprocs detects CPU quota from Linux cgroups and returns the appropriate
 # number of processors for container environments.
 module Maxprocs
-  # cgroup v1 file paths
+  CGROUP_FILE_PATH: ::String
+
   CGROUP_V1_QUOTA_PATH: ::String
 
   CGROUP_V1_PERIOD_PATH: ::String
 
-  # cgroup v2 file paths
   CGROUP_V2_CONTROLLERS_PATH: ::String
 
   CGROUP_V2_CPU_MAX_PATH: ::String
