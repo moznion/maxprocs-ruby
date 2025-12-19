@@ -1,4 +1,4 @@
-# maxprocs-ruby
+# maxprocs-ruby [![CI](https://github.com/moznion/maxprocs-ruby/actions/workflows/ci.yml/badge.svg)](https://github.com/moznion/maxprocs-ruby/actions/workflows/ci.yml)
 
 A lightweight Ruby gem that detects CPU quota from Linux cgroups and returns the appropriate number of processors.
 
