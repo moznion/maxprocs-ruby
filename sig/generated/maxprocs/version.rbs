@@ -1,0 +1,5 @@
+# Generated from lib/maxprocs/version.rb with RBS::Inline
+
+module Maxprocs
+  VERSION: String
+end

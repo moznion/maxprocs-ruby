@@ -1,0 +1,56 @@
+# Generated from lib/maxprocs.rb with RBS::Inline
+
+# Maxprocs detects CPU quota from Linux cgroups and returns the appropriate
+# number of processors for container environments.
+module Maxprocs
+  # cgroup v1 file paths
+  CGROUP_V1_QUOTA_PATH: ::String
+
+  CGROUP_V1_PERIOD_PATH: ::String
+
+  # cgroup v2 file paths
+  CGROUP_V2_CONTROLLERS_PATH: ::String
+
+  CGROUP_V2_CPU_MAX_PATH: ::String
+
+  # Returns the number of CPUs available, considering cgroup quota.
+  #
+  # @rbs round: Symbol -- :floor (default) or :ceil for rounding method
+  # @rbs return: Integer -- the number of CPUs (minimum 1)
+  def self.count: (?round: Symbol) -> Integer
+
+  # Returns the raw CPU quota as a float.
+  #
+  # @rbs return: Float? -- the quota (e.g., 2.5 for 2.5 CPUs), or nil if unlimited
+  def self.quota: () -> Float?
+
+  # Returns whether CPU is limited by cgroup.
+  #
+  # @rbs return: bool -- true if CPU quota is set
+  def self.limited?: () -> bool
+
+  # Returns the detected cgroup version.
+  #
+  # @rbs return: Symbol -- :v1, :v2, or :none
+  def self.cgroup_version: () -> Symbol
+
+  # Clears the cached values. Useful for testing.
+  #
+  # @rbs return: void
+  def self.reset!: () -> void
+
+  # @rbs return: void
+  private def self.ensure_initialized: () -> void
+
+  # @rbs return: Symbol
+  private def self.detect_cgroup_version: () -> Symbol
+
+  # @rbs return: Float?
+  private def self.read_quota: () -> Float?
+
+  # @rbs return: Float?
+  private def self.read_quota_v1: () -> Float?
+
+  # @rbs return: Float?
+  private def self.read_quota_v2: () -> Float?
+end
